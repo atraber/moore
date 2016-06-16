@@ -1,0 +1,28 @@
+# Copyright (c) 2016 Fabian Schuiki
+INPUT = @PROJECT_SOURCE_DIR@/src
+RECURSIVE = YES
+MARKDOWN_SUPPORT = YES
+SOURCE_BROWSER = YES
+
+# Output formats.
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+
+# Make sure paths are relative to the project directory.
+FULL_PATH_NAMES = YES
+STRIP_FROM_PATH = @PROJECT_SOURCE_DIR@/src
+STRIP_FROM_INC_PATH = @PROJECT_SOURCE_DIR@/src
+
+# Project details.
+PROJECT_NAME = Moore
+PROJECT_BRIEF = "A compiler for hardware description languages that outputs LLHD"
+
+# Make the relations between functions visible.
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION = YES
+
+# Automatically use the first sentence as a brief description, and repeat the
+# brief description in the more detailed one.
+JAVADOC_AUTOBRIEF = YES
+QT_AUTOBRIEF = YES
+REPEAT_BRIEF = YES
