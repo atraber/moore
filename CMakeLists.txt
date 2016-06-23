@@ -21,6 +21,15 @@ configure_file(src/config.h.in src/config.h)
 include_directories(${PROJECT_SOURCE_DIR}/src ${PROJECT_BINARY_DIR}/src)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11 -Wall -Wextra -Werror-implicit-function-declaration -Wno-unused-parameter")
 
+# Setup the executable.
+add_executable(moore
+	src/lexer.c
+	src/lexer-sv.c
+	src/main.c
+	src/source.c
+	src/util.c
+)
+
 # Add a documentation target if Doxygen is available.
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
