@@ -8,6 +8,9 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 message("## moore ${CMAKE_BUILD_TYPE} build")
 
+# Gather packages.
+find_package(Threads REQUIRED)
+
 # Versioning.
 set(MOORE_VERSION_MAJOR 0)
 set(MOORE_VERSION_MINOR 1)
@@ -29,6 +32,7 @@ add_executable(moore
 	src/source.c
 	src/util.c
 )
+target_link_libraries(moore ${CMAKE_THREAD_LIBS_INIT})
 
 # Add a documentation target if Doxygen is available.
 find_package(Doxygen)
