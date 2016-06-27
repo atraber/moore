@@ -25,6 +25,7 @@ static struct symbol symbols[] = {
 	{"]",    SV_RBRACK},
 	{"{",    SV_LBRACE},
 	{"}",    SV_RBRACE},
+	{"'",    SV_APOSTROPHE},
 	{"=",    SV_AS},
 	{"+=",   SV_ASADD},
 	{"-=",   SV_ASSUB},
@@ -321,6 +322,11 @@ sv_lexer_next(sv_lexer_t *lex) {
 	start(lex);
 	unichar_t c0 = source_peek(lex->src, 0);
 	unichar_t c1 = source_peek(lex->src, 1);
+
+	if (c0 == -1) {
+		lex->tkn = SV_EOF;
+		return;
+	}
 
 	/* IEEE 1800-2009 5.4 Comments */
 	if (c0 == '/' && c1 == '/') {

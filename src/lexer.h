@@ -166,6 +166,7 @@ enum sv_token {
 	SV_RBRACK,
 	SV_LBRACE,
 	SV_RBRACE,
+	SV_APOSTROPHE,
 	SV_AS,
 	SV_ASADD,
 	SV_ASSUB,
