@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `HierarchyItem` enum in crate `moore_svlog_syntax`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, HierarchyItem">
+
+    <title>moore_svlog_syntax::ast::HierarchyItem - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Enum HierarchyItem</p><div class="block items"><ul><li><a href="#variants">Variants</a></li><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>moore_svlog_syntax</a>::<wbr><a href='index.html'>ast</a></p><script>window.sidebarCurrent = {name: 'HierarchyItem', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>moore_svlog_syntax</a>::<wbr><a href='index.html'>ast</a>::<wbr><a class="enum" href=''>HierarchyItem</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#144-166' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum HierarchyItem {
+    Dummy,
+    ImportDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ImportDecl.html" title="struct moore_svlog_syntax::ast::ImportDecl">ImportDecl</a>),
+    LocalparamDecl(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>),
+    ParameterDecl(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>),
+    ParamDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ParamDecl.html" title="struct moore_svlog_syntax::ast::ParamDecl">ParamDecl</a>),
+    ModportDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ModportDecl.html" title="struct moore_svlog_syntax::ast::ModportDecl">ModportDecl</a>),
+    ClassDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ClassDecl.html" title="struct moore_svlog_syntax::ast::ClassDecl">ClassDecl</a>),
+    Typedef(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Typedef.html" title="struct moore_svlog_syntax::ast::Typedef">Typedef</a>),
+    PortDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.PortDecl.html" title="struct moore_svlog_syntax::ast::PortDecl">PortDecl</a>),
+    Procedure(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Procedure.html" title="struct moore_svlog_syntax::ast::Procedure">Procedure</a>),
+    SubroutineDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.SubroutineDecl.html" title="struct moore_svlog_syntax::ast::SubroutineDecl">SubroutineDecl</a>),
+    ContAssign(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ContAssign.html" title="struct moore_svlog_syntax::ast::ContAssign">ContAssign</a>),
+    GenvarDecl(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenvarDecl.html" title="struct moore_svlog_syntax::ast::GenvarDecl">GenvarDecl</a>&gt;),
+    GenerateRegion(<a class="struct" href="../../moore_common/source/struct.Span.html" title="struct moore_common::source::Span">Span</a>,&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a>&gt;),
+    GenerateFor(<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenerateFor.html" title="struct moore_svlog_syntax::ast::GenerateFor">GenerateFor</a>),
+    GenerateIf(<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenerateIf.html" title="struct moore_svlog_syntax::ast::GenerateIf">GenerateIf</a>),
+    GenerateCase(<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenerateCase.html" title="struct moore_svlog_syntax::ast::GenerateCase">GenerateCase</a>),
+    Assertion(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Assertion.html" title="struct moore_svlog_syntax::ast::Assertion">Assertion</a>),
+    NetDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.NetDecl.html" title="struct moore_svlog_syntax::ast::NetDecl">NetDecl</a>),
+    VarDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.VarDecl.html" title="struct moore_svlog_syntax::ast::VarDecl">VarDecl</a>),
+    Inst(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Inst.html" title="struct moore_svlog_syntax::ast::Inst">Inst</a>),
+}</pre><h2 id='variants' class='variants'>Variants</h2>
+<span id='variant.Dummy' class='variant'><span id='Dummy.v' class='invisible'><code>Dummy</code></span></span><span id='variant.ImportDecl' class='variant'><span id='ImportDecl.v' class='invisible'><code>ImportDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ImportDecl.html" title="struct moore_svlog_syntax::ast::ImportDecl">ImportDecl</a>)</code></span></span><span id='variant.LocalparamDecl' class='variant'><span id='LocalparamDecl.v' class='invisible'><code>LocalparamDecl(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>)</code></span></span><span id='variant.ParameterDecl' class='variant'><span id='ParameterDecl.v' class='invisible'><code>ParameterDecl(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>)</code></span></span><span id='variant.ParamDecl' class='variant'><span id='ParamDecl.v' class='invisible'><code>ParamDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ParamDecl.html" title="struct moore_svlog_syntax::ast::ParamDecl">ParamDecl</a>)</code></span></span><span id='variant.ModportDecl' class='variant'><span id='ModportDecl.v' class='invisible'><code>ModportDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ModportDecl.html" title="struct moore_svlog_syntax::ast::ModportDecl">ModportDecl</a>)</code></span></span><span id='variant.ClassDecl' class='variant'><span id='ClassDecl.v' class='invisible'><code>ClassDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ClassDecl.html" title="struct moore_svlog_syntax::ast::ClassDecl">ClassDecl</a>)</code></span></span><span id='variant.Typedef' class='variant'><span id='Typedef.v' class='invisible'><code>Typedef(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Typedef.html" title="struct moore_svlog_syntax::ast::Typedef">Typedef</a>)</code></span></span><span id='variant.PortDecl' class='variant'><span id='PortDecl.v' class='invisible'><code>PortDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.PortDecl.html" title="struct moore_svlog_syntax::ast::PortDecl">PortDecl</a>)</code></span></span><span id='variant.Procedure' class='variant'><span id='Procedure.v' class='invisible'><code>Procedure(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Procedure.html" title="struct moore_svlog_syntax::ast::Procedure">Procedure</a>)</code></span></span><span id='variant.SubroutineDecl' class='variant'><span id='SubroutineDecl.v' class='invisible'><code>SubroutineDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.SubroutineDecl.html" title="struct moore_svlog_syntax::ast::SubroutineDecl">SubroutineDecl</a>)</code></span></span><span id='variant.ContAssign' class='variant'><span id='ContAssign.v' class='invisible'><code>ContAssign(<a class="struct" href="../../moore_svlog_syntax/ast/struct.ContAssign.html" title="struct moore_svlog_syntax::ast::ContAssign">ContAssign</a>)</code></span></span><span id='variant.GenvarDecl' class='variant'><span id='GenvarDecl.v' class='invisible'><code>GenvarDecl(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenvarDecl.html" title="struct moore_svlog_syntax::ast::GenvarDecl">GenvarDecl</a>&gt;)</code></span></span><span id='variant.GenerateRegion' class='variant'><span id='GenerateRegion.v' class='invisible'><code>GenerateRegion(<a class="struct" href="../../moore_common/source/struct.Span.html" title="struct moore_common::source::Span">Span</a>,&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a>&gt;)</code></span></span><span id='variant.GenerateFor' class='variant'><span id='GenerateFor.v' class='invisible'><code>GenerateFor(<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenerateFor.html" title="struct moore_svlog_syntax::ast::GenerateFor">GenerateFor</a>)</code></span></span><span id='variant.GenerateIf' class='variant'><span id='GenerateIf.v' class='invisible'><code>GenerateIf(<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenerateIf.html" title="struct moore_svlog_syntax::ast::GenerateIf">GenerateIf</a>)</code></span></span><span id='variant.GenerateCase' class='variant'><span id='GenerateCase.v' class='invisible'><code>GenerateCase(<a class="struct" href="../../moore_svlog_syntax/ast/struct.GenerateCase.html" title="struct moore_svlog_syntax::ast::GenerateCase">GenerateCase</a>)</code></span></span><span id='variant.Assertion' class='variant'><span id='Assertion.v' class='invisible'><code>Assertion(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Assertion.html" title="struct moore_svlog_syntax::ast::Assertion">Assertion</a>)</code></span></span><span id='variant.NetDecl' class='variant'><span id='NetDecl.v' class='invisible'><code>NetDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.NetDecl.html" title="struct moore_svlog_syntax::ast::NetDecl">NetDecl</a>)</code></span></span><span id='variant.VarDecl' class='variant'><span id='VarDecl.v' class='invisible'><code>VarDecl(<a class="struct" href="../../moore_svlog_syntax/ast/struct.VarDecl.html" title="struct moore_svlog_syntax::ast::VarDecl">VarDecl</a>)</code></span></span><span id='variant.Inst' class='variant'><span id='Inst.v' class='invisible'><code>Inst(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Inst.html" title="struct moore_svlog_syntax::ast::Inst">Inst</a>)</code></span></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#168-202' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.span' class="method"><span id='span.v' class='invisible'><code>fn <a href='#method.span' class='fnname'>span</a>(&amp;self) -&gt; <a class="struct" href="../../moore_common/source/struct.Span.html" title="struct moore_common::source::Span">Span</a></code></span></h4>
+<h4 id='method.as_str' class="method"><span id='as_str.v' class='invisible'><code>fn <a href='#method.as_str' class='fnname'>as_str</a>(&amp;self) -&gt; &amp;'static <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a></code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#143' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#143' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class="method"><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class="method"><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html" title="trait core::cmp::Eq">Eq</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#143' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#143' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="../../rustc_serialize/serialize/trait.Encodable.html" title="trait rustc_serialize::serialize::Encodable">Encodable</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#143' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.encode' class="method"><span id='encode.v' class='invisible'><code>fn <a href='../../rustc_serialize/serialize/trait.Encodable.html#tymethod.encode' class='fnname'>encode</a>&lt;__S:&nbsp;<a class="trait" href="../../rustc_serialize/serialize/trait.Encoder.html" title="trait rustc_serialize::serialize::Encoder">Encoder</a>&gt;(&amp;self, __arg_0: &amp;mut __S) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, __S::<a class="type" href="../../rustc_serialize/serialize/trait.Encoder.html#associatedtype.Error" title="type rustc_serialize::serialize::Encoder::Error">Error</a>&gt;</code></span></h4>
+<div class='docblock'><p>Serialize a value using an <code>Encoder</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="../../rustc_serialize/serialize/trait.Decodable.html" title="trait rustc_serialize::serialize::Decodable">Decodable</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#143' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.decode' class="method"><span id='decode.v' class='invisible'><code>fn <a href='../../rustc_serialize/serialize/trait.Decodable.html#tymethod.decode' class='fnname'>decode</a>&lt;__D:&nbsp;<a class="trait" href="../../rustc_serialize/serialize/trait.Decoder.html" title="trait rustc_serialize::serialize::Decoder">Decoder</a>&gt;(__arg_0: &amp;mut __D) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="../../moore_svlog_syntax/ast/enum.HierarchyItem.html" title="enum moore_svlog_syntax::ast::HierarchyItem">HierarchyItem</a>, __D::<a class="type" href="../../rustc_serialize/serialize/trait.Decoder.html#associatedtype.Error" title="type rustc_serialize::serialize::Decoder::Error">Error</a>&gt;</code></span></h4>
+<div class='docblock'><p>Deserialize a value using a <code>Decoder</code>.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "moore_svlog_syntax";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

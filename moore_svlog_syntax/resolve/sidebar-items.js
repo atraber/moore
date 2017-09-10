@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["DefId",""]],"fn":[["resolve",""]],"struct":[["Def",""]],"type":[["NameResolution","The result of name resolution: An association between every identifier in the AST and a definition it points to."]]});

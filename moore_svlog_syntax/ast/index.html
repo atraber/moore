@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ast` mod in crate `moore_svlog_syntax`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ast">
+
+    <title>moore_svlog_syntax::ast - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Module ast</p><div class="block items"><ul><li><a href="#reexports">Reexports</a></li><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li></ul></div><p class='location'><a href='../index.html'>moore_svlog_syntax</a></p><script>window.sidebarCurrent = {name: 'ast', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>moore_svlog_syntax</a>::<wbr><a class="mod" href=''>ast</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#2-1257' title='goto source code'>[src]</a></span></h1>
+<h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use self::<a class="enum" href="../../moore_svlog_syntax/ast/enum.TypeData.html" title="enum moore_svlog_syntax::ast::TypeData">TypeData</a>::*;</code></td></tr><tr><td><code>pub use self::<a class="enum" href="../../moore_svlog_syntax/ast/enum.StmtData.html" title="enum moore_svlog_syntax::ast::StmtData">StmtData</a>::*;</code></td></tr><tr><td><code>pub use self::<a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a>::*;</code></td></tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Assertion.html"
+                                  title='struct moore_svlog_syntax::ast::Assertion'>Assertion</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CallArg.html"
+                                  title='struct moore_svlog_syntax::ast::CallArg'>CallArg</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClassDecl.html"
+                                  title='struct moore_svlog_syntax::ast::ClassDecl'>ClassDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClassItem.html"
+                                  title='struct moore_svlog_syntax::ast::ClassItem'>ClassItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Constraint.html"
+                                  title='struct moore_svlog_syntax::ast::Constraint'>Constraint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConstraintItem.html"
+                                  title='struct moore_svlog_syntax::ast::ConstraintItem'>ConstraintItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContAssign.html"
+                                  title='struct moore_svlog_syntax::ast::ContAssign'>ContAssign</a></td>
+                           <td class='docblock-short'>
+                                <p>A continuous assignment statement.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CycleDelay.html"
+                                  title='struct moore_svlog_syntax::ast::CycleDelay'>CycleDelay</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DelayControl.html"
+                                  title='struct moore_svlog_syntax::ast::DelayControl'>DelayControl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnumName.html"
+                                  title='struct moore_svlog_syntax::ast::EnumName'>EnumName</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventControl.html"
+                                  title='struct moore_svlog_syntax::ast::EventControl'>EventControl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Expr.html"
+                                  title='struct moore_svlog_syntax::ast::Expr'>Expr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateBlock.html"
+                                  title='struct moore_svlog_syntax::ast::GenerateBlock'>GenerateBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>A body of a generate construct. May contains hierarchy items or more
+generate constructs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateCase.html"
+                                  title='struct moore_svlog_syntax::ast::GenerateCase'>GenerateCase</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateFor.html"
+                                  title='struct moore_svlog_syntax::ast::GenerateFor'>GenerateFor</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateIf.html"
+                                  title='struct moore_svlog_syntax::ast::GenerateIf'>GenerateIf</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenvarDecl.html"
+                                  title='struct moore_svlog_syntax::ast::GenvarDecl'>GenvarDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Identifier.html"
+                                  title='struct moore_svlog_syntax::ast::Identifier'>Identifier</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportDecl.html"
+                                  title='struct moore_svlog_syntax::ast::ImportDecl'>ImportDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportItem.html"
+                                  title='struct moore_svlog_syntax::ast::ImportItem'>ImportItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Inst.html"
+                                  title='struct moore_svlog_syntax::ast::Inst'>Inst</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstName.html"
+                                  title='struct moore_svlog_syntax::ast::InstName'>InstName</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IntfDecl.html"
+                                  title='struct moore_svlog_syntax::ast::IntfDecl'>IntfDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModDecl.html"
+                                  title='struct moore_svlog_syntax::ast::ModDecl'>ModDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModportDecl.html"
+                                  title='struct moore_svlog_syntax::ast::ModportDecl'>ModportDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModportItem.html"
+                                  title='struct moore_svlog_syntax::ast::ModportItem'>ModportItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NetDecl.html"
+                                  title='struct moore_svlog_syntax::ast::NetDecl'>NetDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NodeId.html"
+                                  title='struct moore_svlog_syntax::ast::NodeId'>NodeId</a></td>
+                           <td class='docblock-short'>
+                                <p>A positive, small ID assigned to each node in the AST. Used as a lightweight
+way to refer to individual nodes, e.g. during symbol table construction and
+name resolution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PackageDecl.html"
+                                  title='struct moore_svlog_syntax::ast::PackageDecl'>PackageDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParamAssignment.html"
+                                  title='struct moore_svlog_syntax::ast::ParamAssignment'>ParamAssignment</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParamDecl.html"
+                                  title='struct moore_svlog_syntax::ast::ParamDecl'>ParamDecl</a></td>
+                           <td class='docblock-short'>
+                                <p>A parameter or localparam declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParamTypeDecl.html"
+                                  title='struct moore_svlog_syntax::ast::ParamTypeDecl'>ParamTypeDecl</a></td>
+                           <td class='docblock-short'>
+                                <p>A single type assignment within a parameter or localparam declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParamValueDecl.html"
+                                  title='struct moore_svlog_syntax::ast::ParamValueDecl'>ParamValueDecl</a></td>
+                           <td class='docblock-short'>
+                                <p>A single value assignment within a parameter or loclparam declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatternField.html"
+                                  title='struct moore_svlog_syntax::ast::PatternField'>PatternField</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PortConn.html"
+                                  title='struct moore_svlog_syntax::ast::PortConn'>PortConn</a></td>
+                           <td class='docblock-short'>
+                                <p>A port connection as given in an instantiation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PortDecl.html"
+                                  title='struct moore_svlog_syntax::ast::PortDecl'>PortDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Procedure.html"
+                                  title='struct moore_svlog_syntax::ast::Procedure'>Procedure</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PropExpr.html"
+                                  title='struct moore_svlog_syntax::ast::PropExpr'>PropExpr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PropSpec.html"
+                                  title='struct moore_svlog_syntax::ast::PropSpec'>PropSpec</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Root.html"
+                                  title='struct moore_svlog_syntax::ast::Root'>Root</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SeqExpr.html"
+                                  title='struct moore_svlog_syntax::ast::SeqExpr'>SeqExpr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Stmt.html"
+                                  title='struct moore_svlog_syntax::ast::Stmt'>Stmt</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StreamExpr.html"
+                                  title='struct moore_svlog_syntax::ast::StreamExpr'>StreamExpr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StructMember.html"
+                                  title='struct moore_svlog_syntax::ast::StructMember'>StructMember</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubroutineDecl.html"
+                                  title='struct moore_svlog_syntax::ast::SubroutineDecl'>SubroutineDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubroutinePort.html"
+                                  title='struct moore_svlog_syntax::ast::SubroutinePort'>SubroutinePort</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubroutinePortDecl.html"
+                                  title='struct moore_svlog_syntax::ast::SubroutinePortDecl'>SubroutinePortDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubroutinePortName.html"
+                                  title='struct moore_svlog_syntax::ast::SubroutinePortName'>SubroutinePortName</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubroutinePrototype.html"
+                                  title='struct moore_svlog_syntax::ast::SubroutinePrototype'>SubroutinePrototype</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Timeunit.html"
+                                  title='struct moore_svlog_syntax::ast::Timeunit'>Timeunit</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Type.html"
+                                  title='struct moore_svlog_syntax::ast::Type'>Type</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Typedef.html"
+                                  title='struct moore_svlog_syntax::ast::Typedef'>Typedef</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VarDecl.html"
+                                  title='struct moore_svlog_syntax::ast::VarDecl'>VarDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VarDeclName.html"
+                                  title='struct moore_svlog_syntax::ast::VarDeclName'>VarDeclName</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssertionActionBlock.html"
+                                  title='enum moore_svlog_syntax::ast::AssertionActionBlock'>AssertionActionBlock</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssertionData.html"
+                                  title='enum moore_svlog_syntax::ast::AssertionData'>AssertionData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssignOp.html"
+                                  title='enum moore_svlog_syntax::ast::AssignOp'>AssignOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.BlockingAssertion.html"
+                                  title='enum moore_svlog_syntax::ast::BlockingAssertion'>BlockingAssertion</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CaseItem.html"
+                                  title='enum moore_svlog_syntax::ast::CaseItem'>CaseItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CaseKind.html"
+                                  title='enum moore_svlog_syntax::ast::CaseKind'>CaseKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CaseMode.html"
+                                  title='enum moore_svlog_syntax::ast::CaseMode'>CaseMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ChargeStrength.html"
+                                  title='enum moore_svlog_syntax::ast::ChargeStrength'>ChargeStrength</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ClassItemData.html"
+                                  title='enum moore_svlog_syntax::ast::ClassItemData'>ClassItemData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ClassItemQualifier.html"
+                                  title='enum moore_svlog_syntax::ast::ClassItemQualifier'>ClassItemQualifier</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConcurrentAssertion.html"
+                                  title='enum moore_svlog_syntax::ast::ConcurrentAssertion'>ConcurrentAssertion</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConstraintItemData.html"
+                                  title='enum moore_svlog_syntax::ast::ConstraintItemData'>ConstraintItemData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConstraintKind.html"
+                                  title='enum moore_svlog_syntax::ast::ConstraintKind'>ConstraintKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DriveStrength.html"
+                                  title='enum moore_svlog_syntax::ast::DriveStrength'>DriveStrength</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EdgeIdent.html"
+                                  title='enum moore_svlog_syntax::ast::EdgeIdent'>EdgeIdent</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EventControlData.html"
+                                  title='enum moore_svlog_syntax::ast::EventControlData'>EventControlData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EventExpr.html"
+                                  title='enum moore_svlog_syntax::ast::EventExpr'>EventExpr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ExprData.html"
+                                  title='enum moore_svlog_syntax::ast::ExprData'>ExprData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.HierarchyItem.html"
+                                  title='enum moore_svlog_syntax::ast::HierarchyItem'>HierarchyItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Item.html"
+                                  title='enum moore_svlog_syntax::ast::Item'>Item</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.JoinKind.html"
+                                  title='enum moore_svlog_syntax::ast::JoinKind'>JoinKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Lifetime.html"
+                                  title='enum moore_svlog_syntax::ast::Lifetime'>Lifetime</a></td>
+                           <td class='docblock-short'>
+                                <p>Lifetime specifier for variables, tasks, and functions. Defaults to static.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModportPort.html"
+                                  title='enum moore_svlog_syntax::ast::ModportPort'>ModportPort</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.NetKind.html"
+                                  title='enum moore_svlog_syntax::ast::NetKind'>NetKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.NetStrength.html"
+                                  title='enum moore_svlog_syntax::ast::NetStrength'>NetStrength</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.NetType.html"
+                                  title='enum moore_svlog_syntax::ast::NetType'>NetType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ParamKind.html"
+                                  title='enum moore_svlog_syntax::ast::ParamKind'>ParamKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PatternFieldData.html"
+                                  title='enum moore_svlog_syntax::ast::PatternFieldData'>PatternFieldData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Port.html"
+                                  title='enum moore_svlog_syntax::ast::Port'>Port</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PortConnKind.html"
+                                  title='enum moore_svlog_syntax::ast::PortConnKind'>PortConnKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PortConnMode.html"
+                                  title='enum moore_svlog_syntax::ast::PortConnMode'>PortConnMode</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents how a named port connection is made.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PortDir.html"
+                                  title='enum moore_svlog_syntax::ast::PortDir'>PortDir</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PortKind.html"
+                                  title='enum moore_svlog_syntax::ast::PortKind'>PortKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ProcedureKind.html"
+                                  title='enum moore_svlog_syntax::ast::ProcedureKind'>ProcedureKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PropBinOp.html"
+                                  title='enum moore_svlog_syntax::ast::PropBinOp'>PropBinOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PropExprData.html"
+                                  title='enum moore_svlog_syntax::ast::PropExprData'>PropExprData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PropSeqBinOp.html"
+                                  title='enum moore_svlog_syntax::ast::PropSeqBinOp'>PropSeqBinOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PropSeqOp.html"
+                                  title='enum moore_svlog_syntax::ast::PropSeqOp'>PropSeqOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RandomQualifier.html"
+                                  title='enum moore_svlog_syntax::ast::RandomQualifier'>RandomQualifier</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RangeMode.html"
+                                  title='enum moore_svlog_syntax::ast::RangeMode'>RangeMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SeqBinOp.html"
+                                  title='enum moore_svlog_syntax::ast::SeqBinOp'>SeqBinOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SeqExprData.html"
+                                  title='enum moore_svlog_syntax::ast::SeqExprData'>SeqExprData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SeqRep.html"
+                                  title='enum moore_svlog_syntax::ast::SeqRep'>SeqRep</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StmtData.html"
+                                  title='enum moore_svlog_syntax::ast::StmtData'>StmtData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StreamConcatSlice.html"
+                                  title='enum moore_svlog_syntax::ast::StreamConcatSlice'>StreamConcatSlice</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StructKind.html"
+                                  title='enum moore_svlog_syntax::ast::StructKind'>StructKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SubroutineItem.html"
+                                  title='enum moore_svlog_syntax::ast::SubroutineItem'>SubroutineItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SubroutineKind.html"
+                                  title='enum moore_svlog_syntax::ast::SubroutineKind'>SubroutineKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SubroutinePortDir.html"
+                                  title='enum moore_svlog_syntax::ast::SubroutinePortDir'>SubroutinePortDir</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TimingControl.html"
+                                  title='enum moore_svlog_syntax::ast::TimingControl'>TimingControl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TypeData.html"
+                                  title='enum moore_svlog_syntax::ast::TypeData'>TypeData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TypeDim.html"
+                                  title='enum moore_svlog_syntax::ast::TypeDim'>TypeDim</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TypeOrExpr.html"
+                                  title='enum moore_svlog_syntax::ast::TypeOrExpr'>TypeOrExpr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TypeSign.html"
+                                  title='enum moore_svlog_syntax::ast::TypeSign'>TypeSign</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UniquePriority.html"
+                                  title='enum moore_svlog_syntax::ast::UniquePriority'>UniquePriority</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DUMMY_NODE_ID.html"
+                                  title='constant moore_svlog_syntax::ast::DUMMY_NODE_ID'>DUMMY_NODE_ID</a></td>
+                           <td class='docblock-short'>
+                                <p>During parsing and syntax tree construction, we assign each node this ID.
+Only later, during the renumbering pass do we assign actual IDs to each
+node.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "moore_svlog_syntax";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

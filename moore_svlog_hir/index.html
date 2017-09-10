@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `moore_svlog_hir` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, moore_svlog_hir">
+
+    <title>moore_svlog_hir - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate moore_svlog_hir</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#functions">Functions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'moore_svlog_hir', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>moore_svlog_hir</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/moore_svlog_hir/lib.rs.html#3-15' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>The high-level intermediate representation for SystemVerilog. After name
+resolution, the AST is lowered into this representation, eliminating a lot
+of the syntactic sugar represented in the AST, and resolving default and
+implicit values.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Expr.html"
+                                  title='struct moore_svlog_hir::Expr'>Expr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateBlock.html"
+                                  title='struct moore_svlog_hir::GenerateBlock'>GenerateBlock</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateFor.html"
+                                  title='struct moore_svlog_hir::GenerateFor'>GenerateFor</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateIf.html"
+                                  title='struct moore_svlog_hir::GenerateIf'>GenerateIf</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HierarchyBody.html"
+                                  title='struct moore_svlog_hir::HierarchyBody'>HierarchyBody</a></td>
+                           <td class='docblock-short'>
+                                <p>A hierarchy body represents the contents of a module, interface, or package.
+Generate regions and nested modules introduce additional bodies. The point
+of hierarchy bodies is to take a level of the design hierarchy and group all
+declarations by type, rather than having them in a single array in
+declaration order.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Interface.html"
+                                  title='struct moore_svlog_hir::Interface'>Interface</a></td>
+                           <td class='docblock-short'>
+                                <p>An interface.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Module.html"
+                                  title='struct moore_svlog_hir::Module'>Module</a></td>
+                           <td class='docblock-short'>
+                                <p>A module.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Name.html"
+                                  title='struct moore_svlog_hir::Name'>Name</a></td>
+                           <td class='docblock-short'>
+                                <p>A name is a lightweight 32 bit tag that refers to a string in a name table.
+During parsing, encountered strings are inserted into the name table and
+only the corresponding tag is kept in the token. Names which have their most
+significant bit set represent case sensitive names, such as for extended
+identifiers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NodeId.html"
+                                  title='struct moore_svlog_hir::NodeId'>NodeId</a></td>
+                           <td class='docblock-short'>
+                                <p>A positive, small ID assigned to each node in the AST. Used as a lightweight
+way to refer to individual nodes, e.g. during symbol table construction and
+name resolution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NodeIndex.html"
+                                  title='struct moore_svlog_hir::NodeIndex'>NodeIndex</a></td>
+                           <td class='docblock-short'>
+                                <p>An search index of all nodes in a HIR tree.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Package.html"
+                                  title='struct moore_svlog_hir::Package'>Package</a></td>
+                           <td class='docblock-short'>
+                                <p>A package.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Port.html"
+                                  title='struct moore_svlog_hir::Port'>Port</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PortDecl.html"
+                                  title='struct moore_svlog_hir::PortDecl'>PortDecl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PortSlice.html"
+                                  title='struct moore_svlog_hir::PortSlice'>PortSlice</a></td>
+                           <td class='docblock-short'>
+                                <p>A port slice refers to a port declaration within the module. It consists of
+the name of the declaration and a list of optional member and index accesses
+that select individual parts of the declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Root.html"
+                                  title='struct moore_svlog_hir::Root'>Root</a></td>
+                           <td class='docblock-short'>
+                                <p>The root of the HIR tree. This represents one elaborated design.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Span.html"
+                                  title='struct moore_svlog_hir::Span'>Span</a></td>
+                           <td class='docblock-short'>
+                                <p>A span of locations within a source file, expressed as a half-open interval
+of bytes <code>[begin,end)</code>.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Node.html"
+                                  title='enum moore_svlog_hir::Node'>Node</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PortSelect.html"
+                                  title='enum moore_svlog_hir::PortSelect'>PortSelect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.is_type_empty.html"
+                                  title='fn moore_svlog_hir::is_type_empty'>is_type_empty</a></td>
+                           <td class='docblock-short'>
+                                <p>Check if a type is empty, i.e. it is an implicit type with no sign or packed
+dimensions specified.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.lower.html"
+                                  title='fn moore_svlog_hir::lower'>lower</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "moore_svlog_hir";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

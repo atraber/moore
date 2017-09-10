@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `HierarchyBody` struct in crate `moore_svlog_hir`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, HierarchyBody">
+
+    <title>moore_svlog_hir::HierarchyBody - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct HierarchyBody</p><div class="block items"><ul><li><a href="#fields">Fields</a></li></ul></div><p class='location'><a href='index.html'>moore_svlog_hir</a></p><script>window.sidebarCurrent = {name: 'HierarchyBody', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>moore_svlog_hir</a>::<wbr><a class="struct" href=''>HierarchyBody</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/moore_svlog_hir/nodes.rs.html#77-93' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct HierarchyBody {
+    pub procs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Procedure.html" title="struct moore_svlog_syntax::ast::Procedure">Procedure</a>&gt;,
+    pub nets: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.NetDecl.html" title="struct moore_svlog_syntax::ast::NetDecl">NetDecl</a>&gt;,
+    pub vars: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.VarDecl.html" title="struct moore_svlog_syntax::ast::VarDecl">VarDecl</a>&gt;,
+    pub assigns: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.ContAssign.html" title="struct moore_svlog_syntax::ast::ContAssign">ContAssign</a>&gt;,
+    pub params: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.ParamDecl.html" title="struct moore_svlog_syntax::ast::ParamDecl">ParamDecl</a>&gt;,
+    pub insts: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Inst.html" title="struct moore_svlog_syntax::ast::Inst">Inst</a>&gt;,
+    pub genreg: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_hir/struct.HierarchyBody.html" title="struct moore_svlog_hir::HierarchyBody">HierarchyBody</a>&gt;,
+    pub genvars: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.GenvarDecl.html" title="struct moore_svlog_syntax::ast::GenvarDecl">GenvarDecl</a>&gt;,
+    pub genfors: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_hir/struct.GenerateFor.html" title="struct moore_svlog_hir::GenerateFor">GenerateFor</a>&gt;,
+    pub genifs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_hir/struct.GenerateIf.html" title="struct moore_svlog_hir::GenerateIf">GenerateIf</a>&gt;,
+    pub gencases: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.GenerateCase.html" title="struct moore_svlog_syntax::ast::GenerateCase">GenerateCase</a>&gt;,
+    pub classes: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.ClassDecl.html" title="struct moore_svlog_syntax::ast::ClassDecl">ClassDecl</a>&gt;,
+    pub subroutines: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.SubroutineDecl.html" title="struct moore_svlog_syntax::ast::SubroutineDecl">SubroutineDecl</a>&gt;,
+    pub asserts: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Assertion.html" title="struct moore_svlog_syntax::ast::Assertion">Assertion</a>&gt;,
+    pub typedefs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Typedef.html" title="struct moore_svlog_syntax::ast::Typedef">Typedef</a>&gt;,
+}</pre><div class='docblock'><p>A hierarchy body represents the contents of a module, interface, or package.
+Generate regions and nested modules introduce additional bodies. The point
+of hierarchy bodies is to take a level of the design hierarchy and group all
+declarations by type, rather than having them in a single array in
+declaration order.</p>
+</div><h2 id='fields' class='fields'>Fields</h2><span id='structfield.procs' class="structfield">
+                           <span id='procs.v' class='invisible'>
+                           <code>procs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Procedure.html" title="struct moore_svlog_syntax::ast::Procedure">Procedure</a>&gt;</code>
+                           </span></span><span id='structfield.nets' class="structfield">
+                           <span id='nets.v' class='invisible'>
+                           <code>nets: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.NetDecl.html" title="struct moore_svlog_syntax::ast::NetDecl">NetDecl</a>&gt;</code>
+                           </span></span><span id='structfield.vars' class="structfield">
+                           <span id='vars.v' class='invisible'>
+                           <code>vars: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.VarDecl.html" title="struct moore_svlog_syntax::ast::VarDecl">VarDecl</a>&gt;</code>
+                           </span></span><span id='structfield.assigns' class="structfield">
+                           <span id='assigns.v' class='invisible'>
+                           <code>assigns: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.ContAssign.html" title="struct moore_svlog_syntax::ast::ContAssign">ContAssign</a>&gt;</code>
+                           </span></span><span id='structfield.params' class="structfield">
+                           <span id='params.v' class='invisible'>
+                           <code>params: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.ParamDecl.html" title="struct moore_svlog_syntax::ast::ParamDecl">ParamDecl</a>&gt;</code>
+                           </span></span><span id='structfield.insts' class="structfield">
+                           <span id='insts.v' class='invisible'>
+                           <code>insts: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Inst.html" title="struct moore_svlog_syntax::ast::Inst">Inst</a>&gt;</code>
+                           </span></span><span id='structfield.genreg' class="structfield">
+                           <span id='genreg.v' class='invisible'>
+                           <code>genreg: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_hir/struct.HierarchyBody.html" title="struct moore_svlog_hir::HierarchyBody">HierarchyBody</a>&gt;</code>
+                           </span></span><span id='structfield.genvars' class="structfield">
+                           <span id='genvars.v' class='invisible'>
+                           <code>genvars: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.GenvarDecl.html" title="struct moore_svlog_syntax::ast::GenvarDecl">GenvarDecl</a>&gt;</code>
+                           </span></span><span id='structfield.genfors' class="structfield">
+                           <span id='genfors.v' class='invisible'>
+                           <code>genfors: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_hir/struct.GenerateFor.html" title="struct moore_svlog_hir::GenerateFor">GenerateFor</a>&gt;</code>
+                           </span></span><span id='structfield.genifs' class="structfield">
+                           <span id='genifs.v' class='invisible'>
+                           <code>genifs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_hir/struct.GenerateIf.html" title="struct moore_svlog_hir::GenerateIf">GenerateIf</a>&gt;</code>
+                           </span></span><span id='structfield.gencases' class="structfield">
+                           <span id='gencases.v' class='invisible'>
+                           <code>gencases: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.GenerateCase.html" title="struct moore_svlog_syntax::ast::GenerateCase">GenerateCase</a>&gt;</code>
+                           </span></span><span id='structfield.classes' class="structfield">
+                           <span id='classes.v' class='invisible'>
+                           <code>classes: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.ClassDecl.html" title="struct moore_svlog_syntax::ast::ClassDecl">ClassDecl</a>&gt;</code>
+                           </span></span><span id='structfield.subroutines' class="structfield">
+                           <span id='subroutines.v' class='invisible'>
+                           <code>subroutines: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.SubroutineDecl.html" title="struct moore_svlog_syntax::ast::SubroutineDecl">SubroutineDecl</a>&gt;</code>
+                           </span></span><span id='structfield.asserts' class="structfield">
+                           <span id='asserts.v' class='invisible'>
+                           <code>asserts: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Assertion.html" title="struct moore_svlog_syntax::ast::Assertion">Assertion</a>&gt;</code>
+                           </span></span><span id='structfield.typedefs' class="structfield">
+                           <span id='typedefs.v' class='invisible'>
+                           <code>typedefs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../moore_svlog_syntax/ast/struct.Typedef.html" title="struct moore_svlog_syntax::ast::Typedef">Typedef</a>&gt;</code>
+                           </span></span></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "moore_svlog_hir";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

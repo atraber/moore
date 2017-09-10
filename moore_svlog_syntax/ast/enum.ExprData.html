@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ExprData` enum in crate `moore_svlog_syntax`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ExprData">
+
+    <title>moore_svlog_syntax::ast::ExprData - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Enum ExprData</p><div class="block items"><ul><li><a href="#variants">Variants</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>moore_svlog_syntax</a>::<wbr><a href='index.html'>ast</a></p><script>window.sidebarCurrent = {name: 'ExprData', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>moore_svlog_syntax</a>::<wbr><a href='index.html'>ast</a>::<wbr><a class="enum" href=''>ExprData</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#592-650' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum ExprData {
+    DummyExpr,
+    LiteralExpr(<a class="enum" href="../../moore_svlog_syntax/token/enum.Lit.html" title="enum moore_svlog_syntax::token::Lit">Lit</a>),
+    IdentExpr(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Identifier.html" title="struct moore_svlog_syntax::ast::Identifier">Identifier</a>),
+    SysIdentExpr(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Identifier.html" title="struct moore_svlog_syntax::ast::Identifier">Identifier</a>),
+    IndexExpr {
+        indexee: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        index: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+    },
+    UnaryExpr {
+        op: <a class="enum" href="../../moore_svlog_syntax/token/enum.Op.html" title="enum moore_svlog_syntax::token::Op">Op</a>,
+        expr: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        postfix: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
+    },
+    BinaryExpr {
+        op: <a class="enum" href="../../moore_svlog_syntax/token/enum.Op.html" title="enum moore_svlog_syntax::token::Op">Op</a>,
+        lhs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        rhs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+    },
+    TernaryExpr {
+        cond: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        true_expr: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        false_expr: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+    },
+    AssignExpr {
+        op: <a class="enum" href="../../moore_svlog_syntax/ast/enum.AssignOp.html" title="enum moore_svlog_syntax::ast::AssignOp">AssignOp</a>,
+        lhs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        rhs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+    },
+    CallExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.CallArg.html" title="struct moore_svlog_syntax::ast::CallArg">CallArg</a>&gt;),
+    TypeExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Type.html" title="struct moore_svlog_syntax::ast::Type">Type</a>&gt;),
+    ConstructorCallExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.CallArg.html" title="struct moore_svlog_syntax::ast::CallArg">CallArg</a>&gt;),
+    ClassNewExpr(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;&gt;),
+    ArrayNewExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;&gt;),
+    EmptyQueueExpr,
+    StreamConcatExpr {
+        slice: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../moore_svlog_syntax/ast/enum.StreamConcatSlice.html" title="enum moore_svlog_syntax::ast::StreamConcatSlice">StreamConcatSlice</a>&gt;,
+        exprs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.StreamExpr.html" title="struct moore_svlog_syntax::ast::StreamExpr">StreamExpr</a>&gt;,
+    },
+    ConcatExpr {
+        repeat: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;&gt;,
+        exprs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+    },
+    MinTypMaxExpr {
+        min: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        typ: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        max: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+    },
+    RangeExpr {
+        mode: <a class="enum" href="../../moore_svlog_syntax/ast/enum.RangeMode.html" title="enum moore_svlog_syntax::ast::RangeMode">RangeMode</a>,
+        lhs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        rhs: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+    },
+    MemberExpr {
+        expr: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,
+        name: <a class="struct" href="../../moore_svlog_syntax/ast/struct.Identifier.html" title="struct moore_svlog_syntax::ast::Identifier">Identifier</a>,
+    },
+    PatternExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.PatternField.html" title="struct moore_svlog_syntax::ast::PatternField">PatternField</a>&gt;),
+}</pre><h2 id='variants' class='variants'>Variants</h2>
+<span id='variant.DummyExpr' class='variant'><span id='DummyExpr.v' class='invisible'><code>DummyExpr</code></span></span><span id='variant.LiteralExpr' class='variant'><span id='LiteralExpr.v' class='invisible'><code>LiteralExpr(<a class="enum" href="../../moore_svlog_syntax/token/enum.Lit.html" title="enum moore_svlog_syntax::token::Lit">Lit</a>)</code></span></span><span id='variant.IdentExpr' class='variant'><span id='IdentExpr.v' class='invisible'><code>IdentExpr(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Identifier.html" title="struct moore_svlog_syntax::ast::Identifier">Identifier</a>)</code></span></span><span id='variant.SysIdentExpr' class='variant'><span id='SysIdentExpr.v' class='invisible'><code>SysIdentExpr(<a class="struct" href="../../moore_svlog_syntax/ast/struct.Identifier.html" title="struct moore_svlog_syntax::ast::Identifier">Identifier</a>)</code></span></span><span id='variant.IndexExpr' class='variant'><span id='IndexExpr.v' class='invisible'><code>IndexExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.IndexExpr.fields'><h3 class='fields'>Fields of <code>IndexExpr</code></h3>
+
+                           <table><tr><td id='variant.IndexExpr.field.indexee'><span id='IndexExpr.v.indexee.v' class='invisible'><code>indexee:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.IndexExpr.field.index'><span id='IndexExpr.v.index.v' class='invisible'><code>index:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.UnaryExpr' class='variant'><span id='UnaryExpr.v' class='invisible'><code>UnaryExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.UnaryExpr.fields'><h3 class='fields'>Fields of <code>UnaryExpr</code></h3>
+
+                           <table><tr><td id='variant.UnaryExpr.field.op'><span id='UnaryExpr.v.op.v' class='invisible'><code>op:&nbsp;<a class="enum" href="../../moore_svlog_syntax/token/enum.Op.html" title="enum moore_svlog_syntax::token::Op">Op</a></code></span></td><td></td></tr><tr><td id='variant.UnaryExpr.field.expr'><span id='UnaryExpr.v.expr.v' class='invisible'><code>expr:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.UnaryExpr.field.postfix'><span id='UnaryExpr.v.postfix.v' class='invisible'><code>postfix:&nbsp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span></td><td></td></tr></table></span><span id='variant.BinaryExpr' class='variant'><span id='BinaryExpr.v' class='invisible'><code>BinaryExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.BinaryExpr.fields'><h3 class='fields'>Fields of <code>BinaryExpr</code></h3>
+
+                           <table><tr><td id='variant.BinaryExpr.field.op'><span id='BinaryExpr.v.op.v' class='invisible'><code>op:&nbsp;<a class="enum" href="../../moore_svlog_syntax/token/enum.Op.html" title="enum moore_svlog_syntax::token::Op">Op</a></code></span></td><td></td></tr><tr><td id='variant.BinaryExpr.field.lhs'><span id='BinaryExpr.v.lhs.v' class='invisible'><code>lhs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.BinaryExpr.field.rhs'><span id='BinaryExpr.v.rhs.v' class='invisible'><code>rhs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.TernaryExpr' class='variant'><span id='TernaryExpr.v' class='invisible'><code>TernaryExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.TernaryExpr.fields'><h3 class='fields'>Fields of <code>TernaryExpr</code></h3>
+
+                           <table><tr><td id='variant.TernaryExpr.field.cond'><span id='TernaryExpr.v.cond.v' class='invisible'><code>cond:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.TernaryExpr.field.true_expr'><span id='TernaryExpr.v.true_expr.v' class='invisible'><code>true_expr:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.TernaryExpr.field.false_expr'><span id='TernaryExpr.v.false_expr.v' class='invisible'><code>false_expr:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.AssignExpr' class='variant'><span id='AssignExpr.v' class='invisible'><code>AssignExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.AssignExpr.fields'><h3 class='fields'>Fields of <code>AssignExpr</code></h3>
+
+                           <table><tr><td id='variant.AssignExpr.field.op'><span id='AssignExpr.v.op.v' class='invisible'><code>op:&nbsp;<a class="enum" href="../../moore_svlog_syntax/ast/enum.AssignOp.html" title="enum moore_svlog_syntax::ast::AssignOp">AssignOp</a></code></span></td><td></td></tr><tr><td id='variant.AssignExpr.field.lhs'><span id='AssignExpr.v.lhs.v' class='invisible'><code>lhs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.AssignExpr.field.rhs'><span id='AssignExpr.v.rhs.v' class='invisible'><code>rhs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.CallExpr' class='variant'><span id='CallExpr.v' class='invisible'><code>CallExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.CallArg.html" title="struct moore_svlog_syntax::ast::CallArg">CallArg</a>&gt;)</code></span></span><span id='variant.TypeExpr' class='variant'><span id='TypeExpr.v' class='invisible'><code>TypeExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Type.html" title="struct moore_svlog_syntax::ast::Type">Type</a>&gt;)</code></span></span><span id='variant.ConstructorCallExpr' class='variant'><span id='ConstructorCallExpr.v' class='invisible'><code>ConstructorCallExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.CallArg.html" title="struct moore_svlog_syntax::ast::CallArg">CallArg</a>&gt;)</code></span></span><span id='variant.ClassNewExpr' class='variant'><span id='ClassNewExpr.v' class='invisible'><code>ClassNewExpr(<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;&gt;)</code></span></span><span id='variant.ArrayNewExpr' class='variant'><span id='ArrayNewExpr.v' class='invisible'><code>ArrayNewExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;,&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;&gt;)</code></span></span><span id='variant.EmptyQueueExpr' class='variant'><span id='EmptyQueueExpr.v' class='invisible'><code>EmptyQueueExpr</code></span></span><span id='variant.StreamConcatExpr' class='variant'><span id='StreamConcatExpr.v' class='invisible'><code>StreamConcatExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.StreamConcatExpr.fields'><h3 class='fields'>Fields of <code>StreamConcatExpr</code></h3>
+
+                           <table><tr><td id='variant.StreamConcatExpr.field.slice'><span id='StreamConcatExpr.v.slice.v' class='invisible'><code>slice:&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../moore_svlog_syntax/ast/enum.StreamConcatSlice.html" title="enum moore_svlog_syntax::ast::StreamConcatSlice">StreamConcatSlice</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.StreamConcatExpr.field.exprs'><span id='StreamConcatExpr.v.exprs.v' class='invisible'><code>exprs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.StreamExpr.html" title="struct moore_svlog_syntax::ast::StreamExpr">StreamExpr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.ConcatExpr' class='variant'><span id='ConcatExpr.v' class='invisible'><code>ConcatExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.ConcatExpr.fields'><h3 class='fields'>Fields of <code>ConcatExpr</code></h3>
+
+                           <table><tr><td id='variant.ConcatExpr.field.repeat'><span id='ConcatExpr.v.repeat.v' class='invisible'><code>repeat:&nbsp;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;&gt;</code></span></td><td></td></tr><tr><td id='variant.ConcatExpr.field.exprs'><span id='ConcatExpr.v.exprs.v' class='invisible'><code>exprs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.MinTypMaxExpr' class='variant'><span id='MinTypMaxExpr.v' class='invisible'><code>MinTypMaxExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.MinTypMaxExpr.fields'><h3 class='fields'>Fields of <code>MinTypMaxExpr</code></h3>
+
+                           <table><tr><td id='variant.MinTypMaxExpr.field.min'><span id='MinTypMaxExpr.v.min.v' class='invisible'><code>min:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.MinTypMaxExpr.field.typ'><span id='MinTypMaxExpr.v.typ.v' class='invisible'><code>typ:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.MinTypMaxExpr.field.max'><span id='MinTypMaxExpr.v.max.v' class='invisible'><code>max:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.RangeExpr' class='variant'><span id='RangeExpr.v' class='invisible'><code>RangeExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.RangeExpr.fields'><h3 class='fields'>Fields of <code>RangeExpr</code></h3>
+
+                           <table><tr><td id='variant.RangeExpr.field.mode'><span id='RangeExpr.v.mode.v' class='invisible'><code>mode:&nbsp;<a class="enum" href="../../moore_svlog_syntax/ast/enum.RangeMode.html" title="enum moore_svlog_syntax::ast::RangeMode">RangeMode</a></code></span></td><td></td></tr><tr><td id='variant.RangeExpr.field.lhs'><span id='RangeExpr.v.lhs.v' class='invisible'><code>lhs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.RangeExpr.field.rhs'><span id='RangeExpr.v.rhs.v' class='invisible'><code>rhs:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr></table></span><span id='variant.MemberExpr' class='variant'><span id='MemberExpr.v' class='invisible'><code>MemberExpr</code></span></span><span class='docblock autohide sub-variant' id='variant.MemberExpr.fields'><h3 class='fields'>Fields of <code>MemberExpr</code></h3>
+
+                           <table><tr><td id='variant.MemberExpr.field.expr'><span id='MemberExpr.v.expr.v' class='invisible'><code>expr:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Expr.html" title="struct moore_svlog_syntax::ast::Expr">Expr</a>&gt;</code></span></td><td></td></tr><tr><td id='variant.MemberExpr.field.name'><span id='MemberExpr.v.name.v' class='invisible'><code>name:&nbsp;<a class="struct" href="../../moore_svlog_syntax/ast/struct.Identifier.html" title="struct moore_svlog_syntax::ast::Identifier">Identifier</a></code></span></td><td></td></tr></table></span><span id='variant.PatternExpr' class='variant'><span id='PatternExpr.v' class='invisible'><code>PatternExpr(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../moore_svlog_syntax/ast/struct.PatternField.html" title="struct moore_svlog_syntax::ast::PatternField">PatternField</a>&gt;)</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#591' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#591' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#591' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class="method"><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class="method"><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html" title="trait core::cmp::Eq">Eq</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#591' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="../../rustc_serialize/serialize/trait.Encodable.html" title="trait rustc_serialize::serialize::Encodable">Encodable</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#591' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.encode' class="method"><span id='encode.v' class='invisible'><code>fn <a href='../../rustc_serialize/serialize/trait.Encodable.html#tymethod.encode' class='fnname'>encode</a>&lt;__S:&nbsp;<a class="trait" href="../../rustc_serialize/serialize/trait.Encoder.html" title="trait rustc_serialize::serialize::Encoder">Encoder</a>&gt;(&amp;self, __arg_0: &amp;mut __S) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, __S::<a class="type" href="../../rustc_serialize/serialize/trait.Encoder.html#associatedtype.Error" title="type rustc_serialize::serialize::Encoder::Error">Error</a>&gt;</code></span></h4>
+<div class='docblock'><p>Serialize a value using an <code>Encoder</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="../../rustc_serialize/serialize/trait.Decodable.html" title="trait rustc_serialize::serialize::Decodable">Decodable</a> for <a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/ast.rs.html#591' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.decode' class="method"><span id='decode.v' class='invisible'><code>fn <a href='../../rustc_serialize/serialize/trait.Decodable.html#tymethod.decode' class='fnname'>decode</a>&lt;__D:&nbsp;<a class="trait" href="../../rustc_serialize/serialize/trait.Decoder.html" title="trait rustc_serialize::serialize::Decoder">Decoder</a>&gt;(__arg_0: &amp;mut __D) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="../../moore_svlog_syntax/ast/enum.ExprData.html" title="enum moore_svlog_syntax::ast::ExprData">ExprData</a>, __D::<a class="type" href="../../rustc_serialize/serialize/trait.Decoder.html#associatedtype.Error" title="type rustc_serialize::serialize::Decoder::Error">Error</a>&gt;</code></span></h4>
+<div class='docblock'><p>Deserialize a value using a <code>Decoder</code>.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "moore_svlog_syntax";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

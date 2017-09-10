@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Kw` enum in crate `moore_svlog_syntax`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Kw">
+
+    <title>moore_svlog_syntax::token::Kw - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Enum Kw</p><div class="block items"><ul><li><a href="#variants">Variants</a></li><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>moore_svlog_syntax</a>::<wbr><a href='index.html'>token</a></p><script>window.sidebarCurrent = {name: 'Kw', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>moore_svlog_syntax</a>::<wbr><a href='index.html'>token</a>::<wbr><a class="enum" href=''>Kw</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#393-395' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Kw {
+    AcceptOn,
+    Alias,
+    Always,
+    AlwaysComb,
+    AlwaysFf,
+    AlwaysLatch,
+    And,
+    Assert,
+    Assign,
+    Assume,
+    Automatic,
+    Before,
+    Begin,
+    Bind,
+    Bins,
+    Binsof,
+    Bit,
+    Break,
+    Buf,
+    Bufif0,
+    Bufif1,
+    Byte,
+    Case,
+    Casex,
+    Casez,
+    Cell,
+    Chandle,
+    Checker,
+    Class,
+    Clocking,
+    Cmos,
+    Config,
+    Const,
+    Constraint,
+    Context,
+    Continue,
+    Cover,
+    Covergroup,
+    Coverpoint,
+    Cross,
+    Deassign,
+    Default,
+    Defparam,
+    Design,
+    Disable,
+    Dist,
+    Do,
+    Edge,
+    Else,
+    End,
+    Endcase,
+    Endchecker,
+    Endclass,
+    Endclocking,
+    Endconfig,
+    Endfunction,
+    Endgenerate,
+    Endgroup,
+    Endinterface,
+    Endmodule,
+    Endpackage,
+    Endprimitive,
+    Endprogram,
+    Endproperty,
+    Endsequence,
+    Endspecify,
+    Endtable,
+    Endtask,
+    Enum,
+    Event,
+    Eventually,
+    Expect,
+    Export,
+    Extends,
+    Extern,
+    Final,
+    FirstMatch,
+    For,
+    Force,
+    Foreach,
+    Forever,
+    Fork,
+    Forkjoin,
+    Function,
+    Generate,
+    Genvar,
+    Global,
+    Highz0,
+    Highz1,
+    If,
+    Iff,
+    Ifnone,
+    IgnoreBins,
+    IllegalBins,
+    Implies,
+    Import,
+    Incdir,
+    Include,
+    Initial,
+    Inout,
+    Input,
+    Inside,
+    Instance,
+    Int,
+    Integer,
+    Interface,
+    Intersect,
+    Join,
+    JoinAny,
+    JoinNone,
+    Large,
+    Let,
+    Liblist,
+    Library,
+    Local,
+    Localparam,
+    Logic,
+    Longint,
+    Macromodule,
+    Matches,
+    Medium,
+    Modport,
+    Module,
+    Nand,
+    Negedge,
+    New,
+    Nexttime,
+    Nmos,
+    Nor,
+    Noshowcancelled,
+    Not,
+    Notif0,
+    Notif1,
+    Null,
+    Or,
+    Output,
+    Package,
+    Packed,
+    Parameter,
+    Pmos,
+    Posedge,
+    Primitive,
+    Priority,
+    Program,
+    Property,
+    Protected,
+    Pull0,
+    Pull1,
+    Pulldown,
+    Pullup,
+    PulsestyleOndetect,
+    PulsestyleOnevent,
+    Pure,
+    Rand,
+    Randc,
+    Randcase,
+    Randsequence,
+    Rcmos,
+    Real,
+    Realtime,
+    Ref,
+    Reg,
+    RejectOn,
+    Release,
+    Repeat,
+    Restrict,
+    Return,
+    Rnmos,
+    Rpmos,
+    Rtran,
+    Rtranif0,
+    Rtranif1,
+    SAlways,
+    SEventually,
+    SNexttime,
+    SUntil,
+    SUntilWith,
+    Scalared,
+    Sequence,
+    Shortint,
+    Shortreal,
+    Showcancelled,
+    Signed,
+    Small,
+    Solve,
+    Specify,
+    Specparam,
+    Static,
+    String,
+    Strong,
+    Strong0,
+    Strong1,
+    Struct,
+    Super,
+    Supply0,
+    Supply1,
+    SyncAcceptOn,
+    SyncRejectOn,
+    Table,
+    Tagged,
+    Task,
+    This,
+    Throughout,
+    Time,
+    Timeprecision,
+    Timeunit,
+    Tran,
+    Tranif0,
+    Tranif1,
+    Tri,
+    Tri0,
+    Tri1,
+    Triand,
+    Trior,
+    Trireg,
+    Type,
+    Typedef,
+    Union,
+    Unique,
+    Unique0,
+    Unsigned,
+    Until,
+    UntilWith,
+    Untyped,
+    Use,
+    Uwire,
+    Var,
+    Vectored,
+    Virtual,
+    Void,
+    Wait,
+    WaitOrder,
+    Wand,
+    Weak,
+    Weak0,
+    Weak1,
+    While,
+    Wildcard,
+    Wire,
+    With,
+    Within,
+    Wor,
+    Xnor,
+    Xor,
+}</pre><h2 id='variants' class='variants'>Variants</h2>
+<span id='variant.AcceptOn' class='variant'><span id='AcceptOn.v' class='invisible'><code>AcceptOn</code></span></span><span id='variant.Alias' class='variant'><span id='Alias.v' class='invisible'><code>Alias</code></span></span><span id='variant.Always' class='variant'><span id='Always.v' class='invisible'><code>Always</code></span></span><span id='variant.AlwaysComb' class='variant'><span id='AlwaysComb.v' class='invisible'><code>AlwaysComb</code></span></span><span id='variant.AlwaysFf' class='variant'><span id='AlwaysFf.v' class='invisible'><code>AlwaysFf</code></span></span><span id='variant.AlwaysLatch' class='variant'><span id='AlwaysLatch.v' class='invisible'><code>AlwaysLatch</code></span></span><span id='variant.And' class='variant'><span id='And.v' class='invisible'><code>And</code></span></span><span id='variant.Assert' class='variant'><span id='Assert.v' class='invisible'><code>Assert</code></span></span><span id='variant.Assign' class='variant'><span id='Assign.v' class='invisible'><code>Assign</code></span></span><span id='variant.Assume' class='variant'><span id='Assume.v' class='invisible'><code>Assume</code></span></span><span id='variant.Automatic' class='variant'><span id='Automatic.v' class='invisible'><code>Automatic</code></span></span><span id='variant.Before' class='variant'><span id='Before.v' class='invisible'><code>Before</code></span></span><span id='variant.Begin' class='variant'><span id='Begin.v' class='invisible'><code>Begin</code></span></span><span id='variant.Bind' class='variant'><span id='Bind.v' class='invisible'><code>Bind</code></span></span><span id='variant.Bins' class='variant'><span id='Bins.v' class='invisible'><code>Bins</code></span></span><span id='variant.Binsof' class='variant'><span id='Binsof.v' class='invisible'><code>Binsof</code></span></span><span id='variant.Bit' class='variant'><span id='Bit.v' class='invisible'><code>Bit</code></span></span><span id='variant.Break' class='variant'><span id='Break.v' class='invisible'><code>Break</code></span></span><span id='variant.Buf' class='variant'><span id='Buf.v' class='invisible'><code>Buf</code></span></span><span id='variant.Bufif0' class='variant'><span id='Bufif0.v' class='invisible'><code>Bufif0</code></span></span><span id='variant.Bufif1' class='variant'><span id='Bufif1.v' class='invisible'><code>Bufif1</code></span></span><span id='variant.Byte' class='variant'><span id='Byte.v' class='invisible'><code>Byte</code></span></span><span id='variant.Case' class='variant'><span id='Case.v' class='invisible'><code>Case</code></span></span><span id='variant.Casex' class='variant'><span id='Casex.v' class='invisible'><code>Casex</code></span></span><span id='variant.Casez' class='variant'><span id='Casez.v' class='invisible'><code>Casez</code></span></span><span id='variant.Cell' class='variant'><span id='Cell.v' class='invisible'><code>Cell</code></span></span><span id='variant.Chandle' class='variant'><span id='Chandle.v' class='invisible'><code>Chandle</code></span></span><span id='variant.Checker' class='variant'><span id='Checker.v' class='invisible'><code>Checker</code></span></span><span id='variant.Class' class='variant'><span id='Class.v' class='invisible'><code>Class</code></span></span><span id='variant.Clocking' class='variant'><span id='Clocking.v' class='invisible'><code>Clocking</code></span></span><span id='variant.Cmos' class='variant'><span id='Cmos.v' class='invisible'><code>Cmos</code></span></span><span id='variant.Config' class='variant'><span id='Config.v' class='invisible'><code>Config</code></span></span><span id='variant.Const' class='variant'><span id='Const.v' class='invisible'><code>Const</code></span></span><span id='variant.Constraint' class='variant'><span id='Constraint.v' class='invisible'><code>Constraint</code></span></span><span id='variant.Context' class='variant'><span id='Context.v' class='invisible'><code>Context</code></span></span><span id='variant.Continue' class='variant'><span id='Continue.v' class='invisible'><code>Continue</code></span></span><span id='variant.Cover' class='variant'><span id='Cover.v' class='invisible'><code>Cover</code></span></span><span id='variant.Covergroup' class='variant'><span id='Covergroup.v' class='invisible'><code>Covergroup</code></span></span><span id='variant.Coverpoint' class='variant'><span id='Coverpoint.v' class='invisible'><code>Coverpoint</code></span></span><span id='variant.Cross' class='variant'><span id='Cross.v' class='invisible'><code>Cross</code></span></span><span id='variant.Deassign' class='variant'><span id='Deassign.v' class='invisible'><code>Deassign</code></span></span><span id='variant.Default' class='variant'><span id='Default.v' class='invisible'><code>Default</code></span></span><span id='variant.Defparam' class='variant'><span id='Defparam.v' class='invisible'><code>Defparam</code></span></span><span id='variant.Design' class='variant'><span id='Design.v' class='invisible'><code>Design</code></span></span><span id='variant.Disable' class='variant'><span id='Disable.v' class='invisible'><code>Disable</code></span></span><span id='variant.Dist' class='variant'><span id='Dist.v' class='invisible'><code>Dist</code></span></span><span id='variant.Do' class='variant'><span id='Do.v' class='invisible'><code>Do</code></span></span><span id='variant.Edge' class='variant'><span id='Edge.v' class='invisible'><code>Edge</code></span></span><span id='variant.Else' class='variant'><span id='Else.v' class='invisible'><code>Else</code></span></span><span id='variant.End' class='variant'><span id='End.v' class='invisible'><code>End</code></span></span><span id='variant.Endcase' class='variant'><span id='Endcase.v' class='invisible'><code>Endcase</code></span></span><span id='variant.Endchecker' class='variant'><span id='Endchecker.v' class='invisible'><code>Endchecker</code></span></span><span id='variant.Endclass' class='variant'><span id='Endclass.v' class='invisible'><code>Endclass</code></span></span><span id='variant.Endclocking' class='variant'><span id='Endclocking.v' class='invisible'><code>Endclocking</code></span></span><span id='variant.Endconfig' class='variant'><span id='Endconfig.v' class='invisible'><code>Endconfig</code></span></span><span id='variant.Endfunction' class='variant'><span id='Endfunction.v' class='invisible'><code>Endfunction</code></span></span><span id='variant.Endgenerate' class='variant'><span id='Endgenerate.v' class='invisible'><code>Endgenerate</code></span></span><span id='variant.Endgroup' class='variant'><span id='Endgroup.v' class='invisible'><code>Endgroup</code></span></span><span id='variant.Endinterface' class='variant'><span id='Endinterface.v' class='invisible'><code>Endinterface</code></span></span><span id='variant.Endmodule' class='variant'><span id='Endmodule.v' class='invisible'><code>Endmodule</code></span></span><span id='variant.Endpackage' class='variant'><span id='Endpackage.v' class='invisible'><code>Endpackage</code></span></span><span id='variant.Endprimitive' class='variant'><span id='Endprimitive.v' class='invisible'><code>Endprimitive</code></span></span><span id='variant.Endprogram' class='variant'><span id='Endprogram.v' class='invisible'><code>Endprogram</code></span></span><span id='variant.Endproperty' class='variant'><span id='Endproperty.v' class='invisible'><code>Endproperty</code></span></span><span id='variant.Endsequence' class='variant'><span id='Endsequence.v' class='invisible'><code>Endsequence</code></span></span><span id='variant.Endspecify' class='variant'><span id='Endspecify.v' class='invisible'><code>Endspecify</code></span></span><span id='variant.Endtable' class='variant'><span id='Endtable.v' class='invisible'><code>Endtable</code></span></span><span id='variant.Endtask' class='variant'><span id='Endtask.v' class='invisible'><code>Endtask</code></span></span><span id='variant.Enum' class='variant'><span id='Enum.v' class='invisible'><code>Enum</code></span></span><span id='variant.Event' class='variant'><span id='Event.v' class='invisible'><code>Event</code></span></span><span id='variant.Eventually' class='variant'><span id='Eventually.v' class='invisible'><code>Eventually</code></span></span><span id='variant.Expect' class='variant'><span id='Expect.v' class='invisible'><code>Expect</code></span></span><span id='variant.Export' class='variant'><span id='Export.v' class='invisible'><code>Export</code></span></span><span id='variant.Extends' class='variant'><span id='Extends.v' class='invisible'><code>Extends</code></span></span><span id='variant.Extern' class='variant'><span id='Extern.v' class='invisible'><code>Extern</code></span></span><span id='variant.Final' class='variant'><span id='Final.v' class='invisible'><code>Final</code></span></span><span id='variant.FirstMatch' class='variant'><span id='FirstMatch.v' class='invisible'><code>FirstMatch</code></span></span><span id='variant.For' class='variant'><span id='For.v' class='invisible'><code>For</code></span></span><span id='variant.Force' class='variant'><span id='Force.v' class='invisible'><code>Force</code></span></span><span id='variant.Foreach' class='variant'><span id='Foreach.v' class='invisible'><code>Foreach</code></span></span><span id='variant.Forever' class='variant'><span id='Forever.v' class='invisible'><code>Forever</code></span></span><span id='variant.Fork' class='variant'><span id='Fork.v' class='invisible'><code>Fork</code></span></span><span id='variant.Forkjoin' class='variant'><span id='Forkjoin.v' class='invisible'><code>Forkjoin</code></span></span><span id='variant.Function' class='variant'><span id='Function.v' class='invisible'><code>Function</code></span></span><span id='variant.Generate' class='variant'><span id='Generate.v' class='invisible'><code>Generate</code></span></span><span id='variant.Genvar' class='variant'><span id='Genvar.v' class='invisible'><code>Genvar</code></span></span><span id='variant.Global' class='variant'><span id='Global.v' class='invisible'><code>Global</code></span></span><span id='variant.Highz0' class='variant'><span id='Highz0.v' class='invisible'><code>Highz0</code></span></span><span id='variant.Highz1' class='variant'><span id='Highz1.v' class='invisible'><code>Highz1</code></span></span><span id='variant.If' class='variant'><span id='If.v' class='invisible'><code>If</code></span></span><span id='variant.Iff' class='variant'><span id='Iff.v' class='invisible'><code>Iff</code></span></span><span id='variant.Ifnone' class='variant'><span id='Ifnone.v' class='invisible'><code>Ifnone</code></span></span><span id='variant.IgnoreBins' class='variant'><span id='IgnoreBins.v' class='invisible'><code>IgnoreBins</code></span></span><span id='variant.IllegalBins' class='variant'><span id='IllegalBins.v' class='invisible'><code>IllegalBins</code></span></span><span id='variant.Implies' class='variant'><span id='Implies.v' class='invisible'><code>Implies</code></span></span><span id='variant.Import' class='variant'><span id='Import.v' class='invisible'><code>Import</code></span></span><span id='variant.Incdir' class='variant'><span id='Incdir.v' class='invisible'><code>Incdir</code></span></span><span id='variant.Include' class='variant'><span id='Include.v' class='invisible'><code>Include</code></span></span><span id='variant.Initial' class='variant'><span id='Initial.v' class='invisible'><code>Initial</code></span></span><span id='variant.Inout' class='variant'><span id='Inout.v' class='invisible'><code>Inout</code></span></span><span id='variant.Input' class='variant'><span id='Input.v' class='invisible'><code>Input</code></span></span><span id='variant.Inside' class='variant'><span id='Inside.v' class='invisible'><code>Inside</code></span></span><span id='variant.Instance' class='variant'><span id='Instance.v' class='invisible'><code>Instance</code></span></span><span id='variant.Int' class='variant'><span id='Int.v' class='invisible'><code>Int</code></span></span><span id='variant.Integer' class='variant'><span id='Integer.v' class='invisible'><code>Integer</code></span></span><span id='variant.Interface' class='variant'><span id='Interface.v' class='invisible'><code>Interface</code></span></span><span id='variant.Intersect' class='variant'><span id='Intersect.v' class='invisible'><code>Intersect</code></span></span><span id='variant.Join' class='variant'><span id='Join.v' class='invisible'><code>Join</code></span></span><span id='variant.JoinAny' class='variant'><span id='JoinAny.v' class='invisible'><code>JoinAny</code></span></span><span id='variant.JoinNone' class='variant'><span id='JoinNone.v' class='invisible'><code>JoinNone</code></span></span><span id='variant.Large' class='variant'><span id='Large.v' class='invisible'><code>Large</code></span></span><span id='variant.Let' class='variant'><span id='Let.v' class='invisible'><code>Let</code></span></span><span id='variant.Liblist' class='variant'><span id='Liblist.v' class='invisible'><code>Liblist</code></span></span><span id='variant.Library' class='variant'><span id='Library.v' class='invisible'><code>Library</code></span></span><span id='variant.Local' class='variant'><span id='Local.v' class='invisible'><code>Local</code></span></span><span id='variant.Localparam' class='variant'><span id='Localparam.v' class='invisible'><code>Localparam</code></span></span><span id='variant.Logic' class='variant'><span id='Logic.v' class='invisible'><code>Logic</code></span></span><span id='variant.Longint' class='variant'><span id='Longint.v' class='invisible'><code>Longint</code></span></span><span id='variant.Macromodule' class='variant'><span id='Macromodule.v' class='invisible'><code>Macromodule</code></span></span><span id='variant.Matches' class='variant'><span id='Matches.v' class='invisible'><code>Matches</code></span></span><span id='variant.Medium' class='variant'><span id='Medium.v' class='invisible'><code>Medium</code></span></span><span id='variant.Modport' class='variant'><span id='Modport.v' class='invisible'><code>Modport</code></span></span><span id='variant.Module' class='variant'><span id='Module.v' class='invisible'><code>Module</code></span></span><span id='variant.Nand' class='variant'><span id='Nand.v' class='invisible'><code>Nand</code></span></span><span id='variant.Negedge' class='variant'><span id='Negedge.v' class='invisible'><code>Negedge</code></span></span><span id='variant.New' class='variant'><span id='New.v' class='invisible'><code>New</code></span></span><span id='variant.Nexttime' class='variant'><span id='Nexttime.v' class='invisible'><code>Nexttime</code></span></span><span id='variant.Nmos' class='variant'><span id='Nmos.v' class='invisible'><code>Nmos</code></span></span><span id='variant.Nor' class='variant'><span id='Nor.v' class='invisible'><code>Nor</code></span></span><span id='variant.Noshowcancelled' class='variant'><span id='Noshowcancelled.v' class='invisible'><code>Noshowcancelled</code></span></span><span id='variant.Not' class='variant'><span id='Not.v' class='invisible'><code>Not</code></span></span><span id='variant.Notif0' class='variant'><span id='Notif0.v' class='invisible'><code>Notif0</code></span></span><span id='variant.Notif1' class='variant'><span id='Notif1.v' class='invisible'><code>Notif1</code></span></span><span id='variant.Null' class='variant'><span id='Null.v' class='invisible'><code>Null</code></span></span><span id='variant.Or' class='variant'><span id='Or.v' class='invisible'><code>Or</code></span></span><span id='variant.Output' class='variant'><span id='Output.v' class='invisible'><code>Output</code></span></span><span id='variant.Package' class='variant'><span id='Package.v' class='invisible'><code>Package</code></span></span><span id='variant.Packed' class='variant'><span id='Packed.v' class='invisible'><code>Packed</code></span></span><span id='variant.Parameter' class='variant'><span id='Parameter.v' class='invisible'><code>Parameter</code></span></span><span id='variant.Pmos' class='variant'><span id='Pmos.v' class='invisible'><code>Pmos</code></span></span><span id='variant.Posedge' class='variant'><span id='Posedge.v' class='invisible'><code>Posedge</code></span></span><span id='variant.Primitive' class='variant'><span id='Primitive.v' class='invisible'><code>Primitive</code></span></span><span id='variant.Priority' class='variant'><span id='Priority.v' class='invisible'><code>Priority</code></span></span><span id='variant.Program' class='variant'><span id='Program.v' class='invisible'><code>Program</code></span></span><span id='variant.Property' class='variant'><span id='Property.v' class='invisible'><code>Property</code></span></span><span id='variant.Protected' class='variant'><span id='Protected.v' class='invisible'><code>Protected</code></span></span><span id='variant.Pull0' class='variant'><span id='Pull0.v' class='invisible'><code>Pull0</code></span></span><span id='variant.Pull1' class='variant'><span id='Pull1.v' class='invisible'><code>Pull1</code></span></span><span id='variant.Pulldown' class='variant'><span id='Pulldown.v' class='invisible'><code>Pulldown</code></span></span><span id='variant.Pullup' class='variant'><span id='Pullup.v' class='invisible'><code>Pullup</code></span></span><span id='variant.PulsestyleOndetect' class='variant'><span id='PulsestyleOndetect.v' class='invisible'><code>PulsestyleOndetect</code></span></span><span id='variant.PulsestyleOnevent' class='variant'><span id='PulsestyleOnevent.v' class='invisible'><code>PulsestyleOnevent</code></span></span><span id='variant.Pure' class='variant'><span id='Pure.v' class='invisible'><code>Pure</code></span></span><span id='variant.Rand' class='variant'><span id='Rand.v' class='invisible'><code>Rand</code></span></span><span id='variant.Randc' class='variant'><span id='Randc.v' class='invisible'><code>Randc</code></span></span><span id='variant.Randcase' class='variant'><span id='Randcase.v' class='invisible'><code>Randcase</code></span></span><span id='variant.Randsequence' class='variant'><span id='Randsequence.v' class='invisible'><code>Randsequence</code></span></span><span id='variant.Rcmos' class='variant'><span id='Rcmos.v' class='invisible'><code>Rcmos</code></span></span><span id='variant.Real' class='variant'><span id='Real.v' class='invisible'><code>Real</code></span></span><span id='variant.Realtime' class='variant'><span id='Realtime.v' class='invisible'><code>Realtime</code></span></span><span id='variant.Ref' class='variant'><span id='Ref.v' class='invisible'><code>Ref</code></span></span><span id='variant.Reg' class='variant'><span id='Reg.v' class='invisible'><code>Reg</code></span></span><span id='variant.RejectOn' class='variant'><span id='RejectOn.v' class='invisible'><code>RejectOn</code></span></span><span id='variant.Release' class='variant'><span id='Release.v' class='invisible'><code>Release</code></span></span><span id='variant.Repeat' class='variant'><span id='Repeat.v' class='invisible'><code>Repeat</code></span></span><span id='variant.Restrict' class='variant'><span id='Restrict.v' class='invisible'><code>Restrict</code></span></span><span id='variant.Return' class='variant'><span id='Return.v' class='invisible'><code>Return</code></span></span><span id='variant.Rnmos' class='variant'><span id='Rnmos.v' class='invisible'><code>Rnmos</code></span></span><span id='variant.Rpmos' class='variant'><span id='Rpmos.v' class='invisible'><code>Rpmos</code></span></span><span id='variant.Rtran' class='variant'><span id='Rtran.v' class='invisible'><code>Rtran</code></span></span><span id='variant.Rtranif0' class='variant'><span id='Rtranif0.v' class='invisible'><code>Rtranif0</code></span></span><span id='variant.Rtranif1' class='variant'><span id='Rtranif1.v' class='invisible'><code>Rtranif1</code></span></span><span id='variant.SAlways' class='variant'><span id='SAlways.v' class='invisible'><code>SAlways</code></span></span><span id='variant.SEventually' class='variant'><span id='SEventually.v' class='invisible'><code>SEventually</code></span></span><span id='variant.SNexttime' class='variant'><span id='SNexttime.v' class='invisible'><code>SNexttime</code></span></span><span id='variant.SUntil' class='variant'><span id='SUntil.v' class='invisible'><code>SUntil</code></span></span><span id='variant.SUntilWith' class='variant'><span id='SUntilWith.v' class='invisible'><code>SUntilWith</code></span></span><span id='variant.Scalared' class='variant'><span id='Scalared.v' class='invisible'><code>Scalared</code></span></span><span id='variant.Sequence' class='variant'><span id='Sequence.v' class='invisible'><code>Sequence</code></span></span><span id='variant.Shortint' class='variant'><span id='Shortint.v' class='invisible'><code>Shortint</code></span></span><span id='variant.Shortreal' class='variant'><span id='Shortreal.v' class='invisible'><code>Shortreal</code></span></span><span id='variant.Showcancelled' class='variant'><span id='Showcancelled.v' class='invisible'><code>Showcancelled</code></span></span><span id='variant.Signed' class='variant'><span id='Signed.v' class='invisible'><code>Signed</code></span></span><span id='variant.Small' class='variant'><span id='Small.v' class='invisible'><code>Small</code></span></span><span id='variant.Solve' class='variant'><span id='Solve.v' class='invisible'><code>Solve</code></span></span><span id='variant.Specify' class='variant'><span id='Specify.v' class='invisible'><code>Specify</code></span></span><span id='variant.Specparam' class='variant'><span id='Specparam.v' class='invisible'><code>Specparam</code></span></span><span id='variant.Static' class='variant'><span id='Static.v' class='invisible'><code>Static</code></span></span><span id='variant.String' class='variant'><span id='String.v' class='invisible'><code>String</code></span></span><span id='variant.Strong' class='variant'><span id='Strong.v' class='invisible'><code>Strong</code></span></span><span id='variant.Strong0' class='variant'><span id='Strong0.v' class='invisible'><code>Strong0</code></span></span><span id='variant.Strong1' class='variant'><span id='Strong1.v' class='invisible'><code>Strong1</code></span></span><span id='variant.Struct' class='variant'><span id='Struct.v' class='invisible'><code>Struct</code></span></span><span id='variant.Super' class='variant'><span id='Super.v' class='invisible'><code>Super</code></span></span><span id='variant.Supply0' class='variant'><span id='Supply0.v' class='invisible'><code>Supply0</code></span></span><span id='variant.Supply1' class='variant'><span id='Supply1.v' class='invisible'><code>Supply1</code></span></span><span id='variant.SyncAcceptOn' class='variant'><span id='SyncAcceptOn.v' class='invisible'><code>SyncAcceptOn</code></span></span><span id='variant.SyncRejectOn' class='variant'><span id='SyncRejectOn.v' class='invisible'><code>SyncRejectOn</code></span></span><span id='variant.Table' class='variant'><span id='Table.v' class='invisible'><code>Table</code></span></span><span id='variant.Tagged' class='variant'><span id='Tagged.v' class='invisible'><code>Tagged</code></span></span><span id='variant.Task' class='variant'><span id='Task.v' class='invisible'><code>Task</code></span></span><span id='variant.This' class='variant'><span id='This.v' class='invisible'><code>This</code></span></span><span id='variant.Throughout' class='variant'><span id='Throughout.v' class='invisible'><code>Throughout</code></span></span><span id='variant.Time' class='variant'><span id='Time.v' class='invisible'><code>Time</code></span></span><span id='variant.Timeprecision' class='variant'><span id='Timeprecision.v' class='invisible'><code>Timeprecision</code></span></span><span id='variant.Timeunit' class='variant'><span id='Timeunit.v' class='invisible'><code>Timeunit</code></span></span><span id='variant.Tran' class='variant'><span id='Tran.v' class='invisible'><code>Tran</code></span></span><span id='variant.Tranif0' class='variant'><span id='Tranif0.v' class='invisible'><code>Tranif0</code></span></span><span id='variant.Tranif1' class='variant'><span id='Tranif1.v' class='invisible'><code>Tranif1</code></span></span><span id='variant.Tri' class='variant'><span id='Tri.v' class='invisible'><code>Tri</code></span></span><span id='variant.Tri0' class='variant'><span id='Tri0.v' class='invisible'><code>Tri0</code></span></span><span id='variant.Tri1' class='variant'><span id='Tri1.v' class='invisible'><code>Tri1</code></span></span><span id='variant.Triand' class='variant'><span id='Triand.v' class='invisible'><code>Triand</code></span></span><span id='variant.Trior' class='variant'><span id='Trior.v' class='invisible'><code>Trior</code></span></span><span id='variant.Trireg' class='variant'><span id='Trireg.v' class='invisible'><code>Trireg</code></span></span><span id='variant.Type' class='variant'><span id='Type.v' class='invisible'><code>Type</code></span></span><span id='variant.Typedef' class='variant'><span id='Typedef.v' class='invisible'><code>Typedef</code></span></span><span id='variant.Union' class='variant'><span id='Union.v' class='invisible'><code>Union</code></span></span><span id='variant.Unique' class='variant'><span id='Unique.v' class='invisible'><code>Unique</code></span></span><span id='variant.Unique0' class='variant'><span id='Unique0.v' class='invisible'><code>Unique0</code></span></span><span id='variant.Unsigned' class='variant'><span id='Unsigned.v' class='invisible'><code>Unsigned</code></span></span><span id='variant.Until' class='variant'><span id='Until.v' class='invisible'><code>Until</code></span></span><span id='variant.UntilWith' class='variant'><span id='UntilWith.v' class='invisible'><code>UntilWith</code></span></span><span id='variant.Untyped' class='variant'><span id='Untyped.v' class='invisible'><code>Untyped</code></span></span><span id='variant.Use' class='variant'><span id='Use.v' class='invisible'><code>Use</code></span></span><span id='variant.Uwire' class='variant'><span id='Uwire.v' class='invisible'><code>Uwire</code></span></span><span id='variant.Var' class='variant'><span id='Var.v' class='invisible'><code>Var</code></span></span><span id='variant.Vectored' class='variant'><span id='Vectored.v' class='invisible'><code>Vectored</code></span></span><span id='variant.Virtual' class='variant'><span id='Virtual.v' class='invisible'><code>Virtual</code></span></span><span id='variant.Void' class='variant'><span id='Void.v' class='invisible'><code>Void</code></span></span><span id='variant.Wait' class='variant'><span id='Wait.v' class='invisible'><code>Wait</code></span></span><span id='variant.WaitOrder' class='variant'><span id='WaitOrder.v' class='invisible'><code>WaitOrder</code></span></span><span id='variant.Wand' class='variant'><span id='Wand.v' class='invisible'><code>Wand</code></span></span><span id='variant.Weak' class='variant'><span id='Weak.v' class='invisible'><code>Weak</code></span></span><span id='variant.Weak0' class='variant'><span id='Weak0.v' class='invisible'><code>Weak0</code></span></span><span id='variant.Weak1' class='variant'><span id='Weak1.v' class='invisible'><code>Weak1</code></span></span><span id='variant.While' class='variant'><span id='While.v' class='invisible'><code>While</code></span></span><span id='variant.Wildcard' class='variant'><span id='Wildcard.v' class='invisible'><code>Wildcard</code></span></span><span id='variant.Wire' class='variant'><span id='Wire.v' class='invisible'><code>Wire</code></span></span><span id='variant.With' class='variant'><span id='With.v' class='invisible'><code>With</code></span></span><span id='variant.Within' class='variant'><span id='Within.v' class='invisible'><code>Within</code></span></span><span id='variant.Wor' class='variant'><span id='Wor.v' class='invisible'><code>Wor</code></span></span><span id='variant.Xnor' class='variant'><span id='Xnor.v' class='invisible'><code>Xnor</code></span></span><span id='variant.Xor' class='variant'><span id='Xor.v' class='invisible'><code>Xor</code></span></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#397-403' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.as_str' class="method"><span id='as_str.v' class='invisible'><code>fn <a href='#method.as_str' class='fnname'>as_str</a>(self) -&gt; &amp;'static <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a></code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html" title="trait core::cmp::PartialOrd">PartialOrd</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.partial_cmp' class="method"><span id='partial_cmp.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#tymethod.partial_cmp' class='fnname'>partial_cmp</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html" title="enum core::cmp::Ordering">Ordering</a>&gt;</code></span></h4>
+<div class='docblock'><p>This method returns an ordering between <code>self</code> and <code>other</code> values if one exists. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#tymethod.partial_cmp">Read more</a></p>
+</div><h4 id='method.lt' class="method"><span id='lt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt' class='fnname'>lt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests less than (for <code>self</code> and <code>other</code>) and is used by the <code>&lt;</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt">Read more</a></p>
+</div><h4 id='method.le' class="method"><span id='le.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le' class='fnname'>le</a>(&amp;self, other: &amp;Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests less than or equal to (for <code>self</code> and <code>other</code>) and is used by the <code>&lt;=</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le">Read more</a></p>
+</div><h4 id='method.gt' class="method"><span id='gt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt' class='fnname'>gt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests greater than (for <code>self</code> and <code>other</code>) and is used by the <code>&gt;</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt">Read more</a></p>
+</div><h4 id='method.ge' class="method"><span id='ge.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge' class='fnname'>ge</a>(&amp;self, other: &amp;Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests greater than or equal to (for <code>self</code> and <code>other</code>) and is used by the <code>&gt;=</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html" title="trait core::cmp::Ord">Ord</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.cmp' class="method"><span id='cmp.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#tymethod.cmp' class='fnname'>cmp</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html" title="enum core::cmp::Ordering">Ordering</a></code></span></h4>
+<div class='docblock'><p>This method returns an <code>Ordering</code> between <code>self</code> and <code>other</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#tymethod.cmp">Read more</a></p>
+</div><h4 id='method.max' class="method"><span id='max.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#method.max' class='fnname'>max</a>(self, other: Self) -&gt; Self</code></span></h4>
+<div class='stability'><div class='stab unstable'><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>ord_max_min</code>)</div></div><div class='docblock'><p>Compares and returns the maximum of two values. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#method.max">Read more</a></p>
+</div><h4 id='method.min' class="method"><span id='min.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#method.min' class='fnname'>min</a>(self, other: Self) -&gt; Self</code></span></h4>
+<div class='stability'><div class='stab unstable'><span class=microscope>🔬</span> This is a nightly-only experimental API.  (<code>ord_max_min</code>)</div></div><div class='docblock'><p>Compares and returns the minimum of two values. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#method.min">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class="method"><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class="method"><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html" title="trait core::cmp::Eq">Eq</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html" title="trait core::hash::Hash">Hash</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#392' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class="method"><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html" title="trait core::hash::Hasher">Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the given [<code>Hasher</code>]. <a href="https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash">Read more</a></p>
+</div><h4 id='method.hash_slice' class="method"><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[Self]</a>, state: &amp;mut H) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;H: <a class="trait" href="https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html" title="trait core::hash::Hasher">Hasher</a>,&nbsp;</span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the given [<code>Hasher</code>]. <a href="https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html" title="trait core::fmt::Display">Display</a> for <a class="enum" href="../../moore_svlog_syntax/token/enum.Kw.html" title="enum moore_svlog_syntax::token::Kw">Kw</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/moore_svlog_syntax/token.rs.html#405-409' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt-1' class="method"><span id='fmt.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter. <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "moore_svlog_syntax";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

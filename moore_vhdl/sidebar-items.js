@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["syntax","A lexical analyzer and parser for VHDL source files as per IEEE 1076-2008."]]});
